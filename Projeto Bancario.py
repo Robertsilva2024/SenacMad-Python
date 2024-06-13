@@ -29,7 +29,7 @@ saque =  opcao2 - 2000
 deposito = opcao1 + opcao2
 pix = opcao1 + opcao3
 saldoanterior = 2000
-saldoatual = opcao1 + opcao2 + opcao3
+saldoatual = opcao2 + 2000
 
 
 # condições a serem feitas
