@@ -63,7 +63,7 @@ print('Deposito atual e de R$',comprodeposito,'Reias')
 print('o Saque Feito atualmente foi de R$',comprosaque,'Reais')
 print('o Comprovante do Pix foi de R$',compropix,'Reais')
 
-# Grafico matplotib em Barras
+# Grafico em Barras - matplotib
 import matplotlib.pyplot as plt
 opcoesconta = ['Deposito','Saque','Pix']
 valores = [opcao1,opcao2,opcao3]
