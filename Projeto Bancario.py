@@ -1,4 +1,4 @@
-    # menu de opções
+# menu de opções
 print('Bem vindo!')
 print('Ao Aplicativo:')
 print('|_itau_|')
