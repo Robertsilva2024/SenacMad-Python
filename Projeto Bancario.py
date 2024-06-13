@@ -72,6 +72,5 @@ plt.bar(opcoesconta,valores)
 plt.title('Grafico de Barras Bancario')
 plt.xlabel('Formas de Uso Mais Recentes até agora:')
 plt.ylabel('Valores'.upper())
-
 plt.show()
 
