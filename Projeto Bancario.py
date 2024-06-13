@@ -20,8 +20,7 @@ elif (op == op4):
     print('voce escolheu a opção 3:Pix','\n')
 elif(op != op4):
     print('invalido')
-
-
+
 opcao1 = float(input('digite o valor que será depositado:'))
 opcao2 = float(input('digite o valor a ser sacado:'))
 opcao3 = float(input('digite o valor do pix para sua conta'))
@@ -31,8 +30,7 @@ pix = opcao1 + opcao3
 saldoanterior = 2000
 saldoatual = opcao1 + opcao3
 saldosobrado = opcao1 + opcao3 - opcao2
-
-
+
 # condições a serem feitas
 if (opcao1 > 0):
     print('Foi depositado com sucesso obrigado!!','\n')
@@ -54,8 +52,7 @@ print('E o pix foi de R$',opcao3,'Reais e aumentou para R$',pix,'\n')
 print('Saldo anterior foi de R$:',saldoanterior,'mil Reias')
 print('O Saldo atual é de R$',saldoatual,'Reais',',junto com o saque Retirado que é',saldosobrado)
 print('E o Resto que Sobrou foi de R$:',saldosobrado,'Reias','\n')
-
-
+
 # extrato
 comprodeposito = opcao1
 comprosaque = opcao2
