@@ -3,8 +3,8 @@ print('Bem vindo!')
 print('Ao Aplicativo:')
 print('|_itau_|')
 print('Formas acesso Disponiveis No itaú são:')
-print('opção 1 - Depositos')
-print('opção 2 - saques')
+print('opção 1 - Deposito')
+print('opção 2 - saque')
 print('opção 3 - Pix')
 print('Escolha uma dessas opções!!','\n')
 
@@ -25,11 +25,12 @@ elif(op != op4):
 opcao1 = float(input('digite o valor que será depositado:'))
 opcao2 = float(input('digite o valor a ser sacado:'))
 opcao3 = float(input('digite o valor do pix para sua conta'))
-saque =  opcao2 - 2000
 deposito = opcao1 + opcao2
+saque = opcao2 - 2000
 pix = opcao1 + opcao3
 saldoanterior = 2000
-saldoatual = opcao2 + 2000
+saldoatual = opcao1 + opcao3
+saldosobrado = opcao1 + opcao3 - opcao2
 
 
 # condições a serem feitas
@@ -51,7 +52,9 @@ print('o Deposito foi de R$',opcao1,'Reias e aumentou para R$:',deposito)
 print('já O saque foi de R$',opcao2,'Reais e Diminuil para R$',saque)
 print('E o pix foi de R$',opcao3,'Reais e aumentou para R$',pix,'\n')
 print('Saldo anterior foi de R$:',saldoanterior,'mil Reias')
-print('Saldo atual é de R$:',saldoatual,'mil','Reias','\n')
+print('O Saldo atual é de R$',saldoatual,'Reais',',junto com o saque Retirado que é',saldosobrado)
+print('E o Resto que Sobrou foi de R$:',saldosobrado,'Reias','\n')
+
 
 # extrato
 comprodeposito = opcao1
@@ -63,13 +66,13 @@ print('Deposito atual e de R$',comprodeposito,'Reias')
 print('o Saque Feito atualmente foi de R$',comprosaque,'Reais')
 print('o Comprovante do Pix foi de R$',compropix,'Reais')
 
-# Grafico em Barras - matplotib
+# Grafico matplotib em Barras
 import matplotlib.pyplot as plt
 opcoesconta = ['Deposito','Saque','Pix']
 valores = [opcao1,opcao2,opcao3]
 
 plt.bar(opcoesconta,valores)
-plt.title('Grafico de Barras Bancario')
+plt.title('Grafico de Barras financeiro')
 plt.xlabel('Formas de Uso Mais Recentes até agora:')
 plt.ylabel('Valores'.upper())
 plt.show()
