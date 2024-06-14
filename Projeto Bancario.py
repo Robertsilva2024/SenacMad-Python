@@ -1,11 +1,11 @@
 # menu de opções
 print('Bem vindo!,Ao')
 print('{:=^31}'.format('|_Aplicativo_|'))
-print("""|------------|          
-         |   BANCO    |  
-         |  I T A Ú   |       
-         | ^^^^^^^^^^ |            
-         |------------|           """)
+print("""        |------------|          
+        |   BANCO    |  
+        |  I T A Ú   |       
+        | ^^^^^^^^^^ |            
+        |------------|           """)
 print('Formas acesso Disponiveis No itaú são:')
 print('opção 1 - Deposito')
 print('opção 2 - saque')
