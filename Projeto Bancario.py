@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 # menu de opções
 print('Bem vindo!,Ao')
 print('{:=^31}'.format('|_Aplicativo_|'))
@@ -22,6 +23,7 @@ op5 = 5
 
 if(op==op2):
     print('vc escolheu a opção 1:Deposito','\n')
+
 elif(op==op3):
     print('voce escolheu a opção 2:Saque','\n')
 elif (op == op4):
@@ -47,6 +49,14 @@ saldoanterior = 2000
 saldoatual = opcao1 + opcao3
 saldosobrado = opcao1 + opcao3 - opcao2 - opcao5
 
+deposito = opcao1
+saque = 2000 - opcao2
+pix = opcao3
+recarga = opcao5
+saldoanterior = 2000
+saldoatual = saldoanterior + opcao1 - opcao2 + opcao3 + opcao5
+saldosobrado = saldoatual
+
 # condições a serem feitas
 if (opcao1 > 0):
     print('depositado Realizado com sucesso obrigado!!','\n')
@@ -64,7 +74,7 @@ else:
 # mostra o novo deposito,saque e pix com o valor digitado
 print('O Deposito foi de R$',opcao1,'Reias e aumentou para R$:',deposito)
 print('E O saque foi de R$',opcao2,'Reais e Diminuil para R$',saque)
-print('já o pix foi de R$',opcao3,'Reais e aumentou para R$',pix,)
+print('já o pix foi de R$',opcao3,'Reais e aumentou para R$',pix)
 print('A Recarga Feita atualmente foi de',opcao5,'Reais')
 print('A opção escolhida de Recarga foi A:',recarga,'\n')
 print('Saldo anterior foi de R$:',saldoanterior,'mil Reias')
@@ -84,13 +94,21 @@ print('O Comprovante do Pix foi de R$',compropix,'Reais')
 print('E Por ultimo a Recarga que foi de',opcao5,'Reais','na',recarga)
 
 # Grafico matplotib em Barras
-import matplotlib.pyplot as plt
-opcoesconta = ['Deposito','Saque','Pix','Recarga']
+opcoesconta = ['Deposito','Saque','Pix','Recarga',]
 valores = [opcao1,opcao2,opcao3,opcao5]
 
 plt.bar(opcoesconta,valores)
 plt.title('Grafico de Barras Financeiro')
 plt.xlabel('Formas de Uso Mais Recentes até agora:')
+plt.ylabel('Valores'.upper())
+plt.show()
+
+opcoesconta = ['Saldo Anterior','Saldo Atual','Saldo Sobrado']
+valores = [saldoanterior,saldoatual,saldosobrado]
+
+plt.bar(opcoesconta,valores)
+plt.title('Resumo Financeiro')
+plt.xlabel('Extrato do Mês:')
 plt.ylabel('Valores'.upper())
 plt.show()
 
